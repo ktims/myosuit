@@ -1,0 +1,5 @@
+*.bak
+*-bak
+*.bom.*
+*.pdf
+*.png

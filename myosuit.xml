@@ -1,0 +1,1616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<export version="D">
+    <design>
+        <source>/home/keenan/infinity/My Documents/electronics/myosuit/myosuit.sch</source>
+        <date>Tue 28 Jan 2014 10:41:39 PM PST</date>
+        <tool>eeschema (2014-01-22 BZR 4631)-product</tool>
+    </design>
+    <components>
+        <comp ref="P103">
+            <value>BUS_IN</value>
+            <fields>
+                <field name="Part#">54602-908LF</field>
+            </fields>
+            <libsource lib="conn" part="RJ45"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A7EEFD</tstamp>
+        </comp>
+        <comp ref="U102">
+            <value>SP491E</value>
+            <footprint>SO8</footprint>
+            <libsource lib="misc" part="SP491E"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A807EB</tstamp>
+        </comp>
+        <comp ref="C103">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A80A5F</tstamp>
+        </comp>
+        <comp ref="R102">
+            <value>120</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A80B1A</tstamp>
+        </comp>
+        <comp ref="R101">
+            <value>120</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A80B2E</tstamp>
+        </comp>
+        <comp ref="U101">
+            <value>1117</value>
+            <fields>
+                <field name="Part#">NCP1117ST50T3G</field>
+            </fields>
+            <libsource lib="regul" part="NCP1117ST50T3G"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A80F98</tstamp>
+        </comp>
+        <comp ref="C101">
+            <value>47uF</value>
+            <footprint>c_1206</footprint>
+            <libsource lib="device" part="CP1"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A81013</tstamp>
+        </comp>
+        <comp ref="U103">
+            <value>ATTINY841-SSU</value>
+            <footprint>SO14</footprint>
+            <libsource lib="misc" part="ATTINY841-SSU"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A8256F</tstamp>
+        </comp>
+        <comp ref="C104">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A82663</tstamp>
+        </comp>
+        <comp ref="P102">
+            <value>ISP</value>
+            <footprint>AVR-ISP-6</footprint>
+            <libsource lib="atmel" part="AVR-ISP-6"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A82CC7</tstamp>
+        </comp>
+        <comp ref="Q101">
+            <value>FDC6305N</value>
+            <libsource lib="misc" part="FDC6305N"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A8330C</tstamp>
+        </comp>
+        <comp ref="Q102">
+            <value>FDC6305N</value>
+            <libsource lib="misc" part="FDC6305N"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A83330</tstamp>
+        </comp>
+        <comp ref="P101">
+            <value>LEDS</value>
+            <libsource lib="conn" part="CONN_5"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A839AA</tstamp>
+        </comp>
+        <comp ref="P104">
+            <value>LIMB_U</value>
+            <fields>
+                <field name="Part#">54602-908LF</field>
+            </fields>
+            <libsource lib="conn" part="RJ45"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A9915B</tstamp>
+        </comp>
+        <comp ref="P105">
+            <value>LIMB_L</value>
+            <fields>
+                <field name="Part#">54602-908LF</field>
+            </fields>
+            <libsource lib="conn" part="RJ45"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52A99238</tstamp>
+        </comp>
+        <comp ref="CM101">
+            <value> </value>
+            <fields>
+                <field name="Part#">SRF2012-361</field>
+            </fields>
+            <libsource lib="device" part="TRANSFO"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52AA08B9</tstamp>
+        </comp>
+        <comp ref="C102">
+            <value>10uF</value>
+            <fields>
+                <field name="Part#">CC0805ZKY5V6BB106</field>
+            </fields>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52AA1CCA</tstamp>
+        </comp>
+        <comp ref="C105">
+            <value>10uF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52CE78C1</tstamp>
+        </comp>
+        <comp ref="C106">
+            <value>10uF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52CE76A8</tstamp>
+        </comp>
+        <comp ref="D101">
+            <value>MBR0540</value>
+            <footprint>sod123</footprint>
+            <libsource lib="device" part="DIODESCH"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52D21F98</tstamp>
+        </comp>
+        <comp ref="P106">
+            <value>BODYGND</value>
+            <libsource lib="conn" part="CONN_1"/>
+            <sheetpath names="/" tstamps="/"/>
+            <tstamp>52E22C60</tstamp>
+        </comp>
+        <comp ref="U205">
+            <value>TL431A</value>
+            <footprint>SOT-23-3</footprint>
+            <libsource lib="special" part="TL431LP"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F70B</tstamp>
+        </comp>
+        <comp ref="R257">
+            <value>330</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F711</tstamp>
+        </comp>
+        <comp ref="R258">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F723</tstamp>
+        </comp>
+        <comp ref="R259">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F729</tstamp>
+        </comp>
+        <comp ref="R260">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F753</tstamp>
+        </comp>
+        <comp ref="R261">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F759</tstamp>
+        </comp>
+        <comp ref="U201">
+            <value>INA2331</value>
+            <libsource lib="misc" part="INA2331"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F7B1</tstamp>
+        </comp>
+        <comp ref="R201">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F800</tstamp>
+        </comp>
+        <comp ref="R202">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F817</tstamp>
+        </comp>
+        <comp ref="R209">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F824</tstamp>
+        </comp>
+        <comp ref="R210">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8F83B</tstamp>
+        </comp>
+        <comp ref="R217">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8FB18</tstamp>
+        </comp>
+        <comp ref="R218">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8FB23</tstamp>
+        </comp>
+        <comp ref="C201">
+            <value>10nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8FB30</tstamp>
+        </comp>
+        <comp ref="C226">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A8FD7C</tstamp>
+        </comp>
+        <comp ref="C213">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A900F5</tstamp>
+        </comp>
+        <comp ref="R229">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A9020D</tstamp>
+        </comp>
+        <comp ref="R225">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90221</tstamp>
+        </comp>
+        <comp ref="R203">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A37</tstamp>
+        </comp>
+        <comp ref="R204">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A3D</tstamp>
+        </comp>
+        <comp ref="R211">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A43</tstamp>
+        </comp>
+        <comp ref="R212">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A49</tstamp>
+        </comp>
+        <comp ref="R219">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A7A</tstamp>
+        </comp>
+        <comp ref="R220">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A80</tstamp>
+        </comp>
+        <comp ref="C202">
+            <value>10nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90A86</tstamp>
+        </comp>
+        <comp ref="R230">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90ACF</tstamp>
+        </comp>
+        <comp ref="R226">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90AD5</tstamp>
+        </comp>
+        <comp ref="U202">
+            <value>INA2331</value>
+            <libsource lib="misc" part="INA2331"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B19</tstamp>
+        </comp>
+        <comp ref="R205">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B21</tstamp>
+        </comp>
+        <comp ref="R206">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B27</tstamp>
+        </comp>
+        <comp ref="R213">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B2D</tstamp>
+        </comp>
+        <comp ref="R214">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B33</tstamp>
+        </comp>
+        <comp ref="R221">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B64</tstamp>
+        </comp>
+        <comp ref="R222">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B6A</tstamp>
+        </comp>
+        <comp ref="C203">
+            <value>10nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90B70</tstamp>
+        </comp>
+        <comp ref="C215">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90BA8</tstamp>
+        </comp>
+        <comp ref="R231">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90BB9</tstamp>
+        </comp>
+        <comp ref="R227">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90BBF</tstamp>
+        </comp>
+        <comp ref="R207">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C09</tstamp>
+        </comp>
+        <comp ref="R208">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C0F</tstamp>
+        </comp>
+        <comp ref="R215">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C15</tstamp>
+        </comp>
+        <comp ref="R216">
+            <value>3.3Meg</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C1B</tstamp>
+        </comp>
+        <comp ref="R223">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C4C</tstamp>
+        </comp>
+        <comp ref="R224">
+            <value>2k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C52</tstamp>
+        </comp>
+        <comp ref="C204">
+            <value>10nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C58</tstamp>
+        </comp>
+        <comp ref="C216">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90C90</tstamp>
+        </comp>
+        <comp ref="R232">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90CA1</tstamp>
+        </comp>
+        <comp ref="R228">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90CA7</tstamp>
+        </comp>
+        <comp ref="RV201">
+            <value>20k</value>
+            <fields>
+                <field name="Part#">3303W-203</field>
+            </fields>
+            <libsource lib="device" part="POT"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA27AE</tstamp>
+        </comp>
+        <comp ref="R237">
+            <value>1k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA2A50</tstamp>
+        </comp>
+        <comp ref="U203">
+            <value>TLC2274</value>
+            <libsource lib="linear" part="TLC274"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA2DD3</tstamp>
+        </comp>
+        <comp ref="R241">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA2E05</tstamp>
+        </comp>
+        <comp ref="R249">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3579</tstamp>
+        </comp>
+        <comp ref="R245">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3A5D</tstamp>
+        </comp>
+        <comp ref="RV202">
+            <value>20k</value>
+            <fields>
+                <field name="Part#">3303W-203</field>
+            </fields>
+            <libsource lib="device" part="POT"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3EFD</tstamp>
+        </comp>
+        <comp ref="R238">
+            <value>1k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3F06</tstamp>
+        </comp>
+        <comp ref="R242">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3F1B</tstamp>
+        </comp>
+        <comp ref="R250">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3F52</tstamp>
+        </comp>
+        <comp ref="R246">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3F63</tstamp>
+        </comp>
+        <comp ref="RV203">
+            <value>20k</value>
+            <fields>
+                <field name="Part#">3303W-203</field>
+            </fields>
+            <libsource lib="device" part="POT"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA40D5</tstamp>
+        </comp>
+        <comp ref="R239">
+            <value>1k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA40DE</tstamp>
+        </comp>
+        <comp ref="U204">
+            <value>TLC2274</value>
+            <libsource lib="linear" part="TLC274"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA40E7</tstamp>
+        </comp>
+        <comp ref="R243">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA40F3</tstamp>
+        </comp>
+        <comp ref="R251">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4124</tstamp>
+        </comp>
+        <comp ref="R247">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4135</tstamp>
+        </comp>
+        <comp ref="RV204">
+            <value>20k</value>
+            <fields>
+                <field name="Part#">3303W-203</field>
+            </fields>
+            <libsource lib="device" part="POT"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4157</tstamp>
+        </comp>
+        <comp ref="R240">
+            <value>1k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4160</tstamp>
+        </comp>
+        <comp ref="R244">
+            <value>100k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4175</tstamp>
+        </comp>
+        <comp ref="R252">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA41A6</tstamp>
+        </comp>
+        <comp ref="R248">
+            <value>10k</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA41B7</tstamp>
+        </comp>
+        <comp ref="R253">
+            <value>160</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA4998</tstamp>
+        </comp>
+        <comp ref="C221">
+            <value>1u</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA49AC</tstamp>
+        </comp>
+        <comp ref="R254">
+            <value>160</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5682</tstamp>
+        </comp>
+        <comp ref="C222">
+            <value>1u</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5688</tstamp>
+        </comp>
+        <comp ref="R255">
+            <value>160</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5D00</tstamp>
+        </comp>
+        <comp ref="C223">
+            <value>1u</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5D06</tstamp>
+        </comp>
+        <comp ref="R256">
+            <value>160</value>
+            <libsource lib="device" part="R"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5F31</tstamp>
+        </comp>
+        <comp ref="C224">
+            <value>1u</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA5F37</tstamp>
+        </comp>
+        <comp ref="C227">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A96C1D</tstamp>
+        </comp>
+        <comp ref="U206">
+            <value>TLC272</value>
+            <libsource lib="linear" part="TL072"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A96C3B</tstamp>
+        </comp>
+        <comp ref="D209">
+            <value>BAV199</value>
+            <libsource lib="misc" part="BAV199"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A9D958</tstamp>
+        </comp>
+        <comp ref="D210">
+            <value>BAV199</value>
+            <libsource lib="misc" part="BAV199"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A9DFF0</tstamp>
+        </comp>
+        <comp ref="D211">
+            <value>BAV199</value>
+            <libsource lib="misc" part="BAV199"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A9E833</tstamp>
+        </comp>
+        <comp ref="D212">
+            <value>BAV199</value>
+            <libsource lib="misc" part="BAV199"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A9ED21</tstamp>
+        </comp>
+        <comp ref="C214">
+            <value>100nF</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52A90ABE</tstamp>
+        </comp>
+        <comp ref="C230">
+            <value>100n</value>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA2EBB</tstamp>
+        </comp>
+        <comp ref="C225">
+            <value>10u</value>
+            <fields>
+                <field name="Part#">CC0805ZKY5V6BB106</field>
+            </fields>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3A0F</tstamp>
+        </comp>
+        <comp ref="C228">
+            <value>10u</value>
+            <fields>
+                <field name="Part#">CC0805ZKY5V6BB106</field>
+            </fields>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3A32</tstamp>
+        </comp>
+        <comp ref="C229">
+            <value>10u</value>
+            <fields>
+                <field name="Part#">CC0805ZKY5V6BB106</field>
+            </fields>
+            <libsource lib="device" part="C"/>
+            <sheetpath names="/analog input/" tstamps="/52A8F66D/"/>
+            <tstamp>52AA3A3D</tstamp>
+        </comp>
+    </components>
+    <libparts>
+        <libpart lib="device" part="C">
+            <description>Condensateur non polarise</description>
+            <footprints>
+                <fp>SM*</fp>
+                <fp>C?</fp>
+                <fp>C1-1</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">C</field>
+                <field name="Value">C</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="device" part="CP1">
+            <description>Condensateur polarise</description>
+            <footprints>
+                <fp>CP*</fp>
+                <fp>SM*</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">C</field>
+                <field name="Value">CP1</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="device" part="DIODESCH">
+            <description>Diode schottky</description>
+            <footprints>
+                <fp>D?</fp>
+                <fp>S*</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">D</field>
+                <field name="Value">DIODESCH</field>
+            </fields>
+            <pins>
+                <pin num="1" name="A" type="passive"/>
+                <pin num="2" name="K" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="device" part="POT">
+            <description>Potentionmetre</description>
+            <fields>
+                <field name="Reference">RV</field>
+                <field name="Value">POT</field>
+            </fields>
+            <pins>
+                <pin num="1" name="1" type="passive"/>
+                <pin num="2" name="2" type="passive"/>
+                <pin num="3" name="3" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="device" part="R">
+            <description>Resistance</description>
+            <footprints>
+                <fp>R?</fp>
+                <fp>SM0603</fp>
+                <fp>SM0805</fp>
+                <fp>R?-*</fp>
+                <fp>SM1206</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">R</field>
+                <field name="Value">R</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="device" part="TRANSFO">
+            <fields>
+                <field name="Reference">T</field>
+                <field name="Value">TRANSFO</field>
+            </fields>
+            <pins>
+                <pin num="1" name="AA" type="passive"/>
+                <pin num="2" name="AB" type="passive"/>
+                <pin num="3" name="SA" type="passive"/>
+                <pin num="4" name="SB" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="conn" part="CONN_1">
+            <description>1 pin</description>
+            <fields>
+                <field name="Reference">P</field>
+                <field name="Value">CONN_1</field>
+            </fields>
+            <pins>
+                <pin num="1" name="1" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="conn" part="CONN_5">
+            <description>Symbole general de connecteur</description>
+            <fields>
+                <field name="Reference">P</field>
+                <field name="Value">CONN_5</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+                <pin num="3" name="~" type="passive"/>
+                <pin num="4" name="~" type="passive"/>
+                <pin num="5" name="~" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="conn" part="RJ45">
+            <fields>
+                <field name="Reference">J</field>
+                <field name="Value">RJ45</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+                <pin num="3" name="~" type="passive"/>
+                <pin num="4" name="~" type="passive"/>
+                <pin num="5" name="~" type="passive"/>
+                <pin num="6" name="~" type="passive"/>
+                <pin num="7" name="~" type="passive"/>
+                <pin num="8" name="~" type="passive"/>
+                <pin num="9" name="SHIELD" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="linear" part="LM2902N">
+            <aliases>
+                <alias>LM324</alias>
+                <alias>TLC274</alias>
+                <alias>TL074</alias>
+                <alias>LM324N</alias>
+                <alias>LM324AN</alias>
+            </aliases>
+            <description>Quad Op amp.</description>
+            <docs>op_amps/lm324.pdf</docs>
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">LM2902N</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="output"/>
+                <pin num="2" name="-" type="input"/>
+                <pin num="3" name="+" type="input"/>
+                <pin num="4" name="V+" type="power_in"/>
+                <pin num="5" name="+" type="input"/>
+                <pin num="6" name="-" type="input"/>
+                <pin num="7" name="~" type="output"/>
+                <pin num="8" name="~" type="output"/>
+                <pin num="9" name="-" type="input"/>
+                <pin num="10" name="+" type="input"/>
+                <pin num="11" name="V-" type="power_in"/>
+                <pin num="12" name="+" type="input"/>
+                <pin num="13" name="-" type="input"/>
+                <pin num="14" name="~" type="output"/>
+            </pins>
+        </libpart>
+        <libpart lib="linear" part="LM358">
+            <aliases>
+                <alias>LMC6062</alias>
+                <alias>LMC6082</alias>
+                <alias>LM358N</alias>
+                <alias>TL072</alias>
+                <alias>TL082</alias>
+            </aliases>
+            <description>Dual Op amp (low power)</description>
+            <docs>ns/lm158.pdf</docs>
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">LM358</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="output"/>
+                <pin num="2" name="-" type="input"/>
+                <pin num="3" name="+" type="input"/>
+                <pin num="4" name="V-" type="power_in"/>
+                <pin num="5" name="+" type="input"/>
+                <pin num="6" name="-" type="input"/>
+                <pin num="7" name="~" type="output"/>
+                <pin num="8" name="V+" type="power_in"/>
+            </pins>
+        </libpart>
+        <libpart lib="regul" part="NCP1117ST50T3G">
+            <aliases>
+                <alias>NCP1117ST12T3G</alias>
+                <alias>NCP1117ST15T3G</alias>
+                <alias>NCP1117ST18T3G</alias>
+                <alias>NCP1117ST20T3G</alias>
+                <alias>NCP1117ST25T3G</alias>
+                <alias>NCP1117ST285T3G</alias>
+                <alias>NCP1117ST33T3G</alias>
+            </aliases>
+            <description>NCP1117ST50T3G, 1A Low drop-out regulator, Fixed Output 5V, SOT223</description>
+            <docs>http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF</docs>
+            <footprints>
+                <fp>SOT223</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">NCP1117ST50T3G</field>
+            </fields>
+            <pins>
+                <pin num="1" name="GND" type="power_in"/>
+                <pin num="2" name="VO" type="power_out"/>
+                <pin num="3" name="VI" type="power_in"/>
+            </pins>
+        </libpart>
+        <libpart lib="special" part="TL431LP">
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">TL431LP</field>
+            </fields>
+            <pins>
+                <pin num="1" name="K" type="input"/>
+                <pin num="2" name="R" type="input"/>
+                <pin num="3" name="A" type="input"/>
+            </pins>
+        </libpart>
+        <libpart lib="atmel" part="AVR-ISP-6">
+            <description>Standard IDC6 Male Connector, ATMEL ISP 6pin</description>
+            <fields>
+                <field name="Reference">CON</field>
+                <field name="Value">AVR-ISP-6</field>
+                <field name="Footprint">AVR-ISP-6</field>
+            </fields>
+            <pins>
+                <pin num="1" name="~" type="passive"/>
+                <pin num="2" name="~" type="passive"/>
+                <pin num="3" name="~" type="passive"/>
+                <pin num="4" name="~" type="passive"/>
+                <pin num="5" name="~" type="passive"/>
+                <pin num="6" name="~" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="misc" part="ATTINY841-SSU">
+            <aliases>
+                <alias>ATTINY44A-SS</alias>
+                <alias>ATTINY84A-SS</alias>
+            </aliases>
+            <description>ATTINY24A, SO14, 2k Flash, 128B SRAM, 128B EEPROM, dW</description>
+            <docs>http://www.atmel.com/dyn/resources/prod_documents/doc8183.pdf</docs>
+            <fields>
+                <field name="Reference">IC</field>
+                <field name="Value">ATTINY841-SSU</field>
+                <field name="Footprint">SO14</field>
+            </fields>
+            <pins>
+                <pin num="1" name="VCC" type="power_in"/>
+                <pin num="2" name="(PCINT8/CLKI/XTAL1/ADC11)PB0" type="BiDi"/>
+                <pin num="3" name="(PCINT9/XTAL2/INT0/ADC10)PB1" type="BiDi"/>
+                <pin num="4" name="(PCINT11/dW/~RESET~/ADC9)PB3" type="BiDi"/>
+                <pin num="5" name="(PCINT10/CLKO/ICP2/RXD0/TOCC7/ADC8)PB2" type="BiDi"/>
+                <pin num="6" name="(PCINT7/ICP1/TXD0/~SS~/TOCC6/ADC7)PA7" type="BiDi"/>
+                <pin num="7" name="(PCINT6/ACO1/XDA/MOSI/XCK1/TOCC5/ADC6)PA6" type="BiDi"/>
+                <pin num="8" name="(PCINT5/ACO0/TXD1/T2/TOCC4/ADC5)PA5" type="BiDi"/>
+                <pin num="9" name="(PCINT4/AIN11/RXD1/SCK/SCL/T1/TOCC3/ADC4)PA4" type="BiDi"/>
+                <pin num="10" name="(PCINT3/AIN10/SCK/XCK0/T0/TOCC2/ADC3)PA3" type="BiDi"/>
+                <pin num="11" name="(PCINT2/AIN01/RXD0/~SS~/TOCC1/ADC2)PA2" type="BiDi"/>
+                <pin num="12" name="(PCINT1/AIN00/TXD0/MOSI/TOCC0/ADC1)PA1" type="BiDi"/>
+                <pin num="13" name="(PCINT0/MISO/AREF/ADC0)PA0" type="BiDi"/>
+                <pin num="14" name="GND" type="power_in"/>
+            </pins>
+        </libpart>
+        <libpart lib="misc" part="BAV199">
+            <description>Double Diode</description>
+            <footprints>
+                <fp>sot23</fp>
+                <fp>sot23-3</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">D</field>
+                <field name="Value">BAV199</field>
+            </fields>
+            <pins>
+                <pin num="1" name="Anode" type="passive"/>
+                <pin num="2" name="cathode" type="passive"/>
+                <pin num="3" name="AK" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="misc" part="FDC6305N">
+            <description>Dual N-Channel 2.5V MOSFET</description>
+            <footprints>
+                <fp>SOT23-6</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">Q</field>
+                <field name="Value">FDC6305N</field>
+            </fields>
+            <pins>
+                <pin num="1" name="G" type="input"/>
+                <pin num="2" name="S" type="passive"/>
+                <pin num="3" name="G" type="input"/>
+                <pin num="4" name="D" type="passive"/>
+                <pin num="5" name="S" type="passive"/>
+                <pin num="6" name="D" type="passive"/>
+            </pins>
+        </libpart>
+        <libpart lib="misc" part="INA2331">
+            <description>Low-Power, Single-Supply, CMOS Instrumentation Amplifiers</description>
+            <footprints>
+                <fp>TSSOP-14</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">INA2331</field>
+            </fields>
+            <pins>
+                <pin num="1" name="RG" type="input"/>
+                <pin num="2" name="-" type="input"/>
+                <pin num="3" name="+" type="input"/>
+                <pin num="4" name="V-" type="power_in"/>
+                <pin num="5" name="+" type="input"/>
+                <pin num="6" name="-" type="input"/>
+                <pin num="7" name="RG" type="input"/>
+                <pin num="8" name="~SD" type="input"/>
+                <pin num="9" name="~" type="output"/>
+                <pin num="10" name="REF" type="input"/>
+                <pin num="11" name="V+" type="power_in"/>
+                <pin num="12" name="REF" type="input"/>
+                <pin num="13" name="~" type="output"/>
+                <pin num="14" name="~SD" type="input"/>
+            </pins>
+        </libpart>
+        <libpart lib="misc" part="SP491E">
+            <aliases>
+                <alias>SP3485CN</alias>
+                <alias>75180</alias>
+            </aliases>
+            <description>RS485 Full Duplex Transceiver</description>
+            <footprints>
+                <fp>SO14N</fp>
+            </footprints>
+            <fields>
+                <field name="Reference">U</field>
+                <field name="Value">SP491E</field>
+                <field name="Footprint">SO8</field>
+            </fields>
+            <pins>
+                <pin num="2" name="R" type="output"/>
+                <pin num="3" name="~RE~" type="input"/>
+                <pin num="4" name="DE" type="input"/>
+                <pin num="5" name="D" type="input"/>
+                <pin num="6" name="GND" type="power_in"/>
+                <pin num="7" name="GND" type="power_in"/>
+                <pin num="9" name="Y" type="output"/>
+                <pin num="10" name="Z" type="output"/>
+                <pin num="11" name="B" type="input"/>
+                <pin num="12" name="A" type="input"/>
+                <pin num="14" name="VCC" type="power_in"/>
+            </pins>
+        </libpart>
+    </libparts>
+    <libraries>
+        <library logical="device">
+            <uri>/usr/local/share/kicad/library/device.lib</uri>
+        </library>
+        <library logical="conn">
+            <uri>/usr/local/share/kicad/library/conn.lib</uri>
+        </library>
+        <library logical="linear">
+            <uri>/usr/local/share/kicad/library/linear.lib</uri>
+        </library>
+        <library logical="regul">
+            <uri>/usr/local/share/kicad/library/regul.lib</uri>
+        </library>
+        <library logical="special">
+            <uri>/usr/local/share/kicad/library/special.lib</uri>
+        </library>
+        <library logical="atmel">
+            <uri>/usr/local/share/kicad/library/atmel.lib</uri>
+        </library>
+        <library logical="misc">
+            <uri>../kicad-lib/misc.lib</uri>
+        </library>
+    </libraries>
+    <nets>
+        <net code="1" name="Net-(P102-Pad4)">
+            <node ref="P102" pin="4"/>
+            <node ref="Q102" pin="1"/>
+            <node ref="U103" pin="7"/>
+        </net>
+        <net code="2" name="Net-(P102-Pad3)">
+            <node ref="P102" pin="3"/>
+            <node ref="Q101" pin="1"/>
+            <node ref="U103" pin="9"/>
+        </net>
+        <net code="3" name="Net-(P102-Pad1)">
+            <node ref="P102" pin="1"/>
+            <node ref="U103" pin="8"/>
+            <node ref="Q102" pin="3"/>
+        </net>
+        <net code="4" name="Net-(U102-Pad4)">
+            <node ref="U102" pin="4"/>
+            <node ref="U103" pin="3"/>
+        </net>
+        <net code="5" name="Net-(P102-Pad5)">
+            <node ref="P102" pin="5"/>
+            <node ref="Q101" pin="3"/>
+            <node ref="U103" pin="4"/>
+        </net>
+        <net code="6" name="+5V">
+            <node ref="C214" pin="2"/>
+            <node ref="C230" pin="2"/>
+            <node ref="U202" pin="14"/>
+            <node ref="C103" pin="1"/>
+            <node ref="U103" pin="1"/>
+            <node ref="P102" pin="2"/>
+            <node ref="C104" pin="1"/>
+            <node ref="U101" pin="2"/>
+            <node ref="U102" pin="14"/>
+            <node ref="C102" pin="1"/>
+            <node ref="C213" pin="2"/>
+            <node ref="U206" pin="8"/>
+            <node ref="U203" pin="4"/>
+            <node ref="U204" pin="4"/>
+            <node ref="U202" pin="8"/>
+            <node ref="U202" pin="11"/>
+            <node ref="C216" pin="2"/>
+            <node ref="C215" pin="2"/>
+            <node ref="U201" pin="11"/>
+            <node ref="U201" pin="8"/>
+            <node ref="R257" pin="1"/>
+            <node ref="U201" pin="14"/>
+        </net>
+        <net code="7" name="Net-(C101-Pad1)">
+            <node ref="U101" pin="3"/>
+            <node ref="C101" pin="1"/>
+            <node ref="D101" pin="2"/>
+        </net>
+        <net code="8" name="Net-(U102-Pad5)">
+            <node ref="U103" pin="6"/>
+            <node ref="U102" pin="5"/>
+        </net>
+        <net code="9" name="Net-(U102-Pad2)">
+            <node ref="U103" pin="5"/>
+            <node ref="U102" pin="2"/>
+        </net>
+        <net code="10" name="+3.3VADC">
+            <node ref="R248" pin="1"/>
+            <node ref="R247" pin="1"/>
+            <node ref="C225" pin="1"/>
+            <node ref="U205" pin="1"/>
+            <node ref="R257" pin="2"/>
+            <node ref="R258" pin="1"/>
+            <node ref="R260" pin="1"/>
+            <node ref="R245" pin="1"/>
+            <node ref="R246" pin="1"/>
+            <node ref="U103" pin="13"/>
+        </net>
+        <net code="11" name="Net-(CM101-Pad1)">
+            <node ref="D101" pin="1"/>
+            <node ref="CM101" pin="1"/>
+        </net>
+        <net code="12" name="/analog input/IN3+">
+            <node ref="R207" pin="1"/>
+            <node ref="P105" pin="3"/>
+        </net>
+        <net code="13" name="/GNDIN">
+            <node ref="CM101" pin="3"/>
+            <node ref="P103" pin="8"/>
+            <node ref="P103" pin="7"/>
+        </net>
+        <net code="14" name="/LED3">
+            <node ref="P101" pin="5"/>
+            <node ref="Q102" pin="6"/>
+            <node ref="P105" pin="8"/>
+        </net>
+        <net code="15" name="/LED2">
+            <node ref="P101" pin="4"/>
+            <node ref="P105" pin="5"/>
+            <node ref="Q102" pin="4"/>
+        </net>
+        <net code="16" name="/analog input/IN3-">
+            <node ref="R208" pin="1"/>
+            <node ref="P105" pin="6"/>
+        </net>
+        <net code="17" name="/analog input/IN2+">
+            <node ref="R206" pin="1"/>
+            <node ref="P105" pin="2"/>
+        </net>
+        <net code="18" name="/analog input/IN2-">
+            <node ref="P105" pin="1"/>
+            <node ref="R205" pin="1"/>
+        </net>
+        <net code="19" name="/LED1">
+            <node ref="P101" pin="3"/>
+            <node ref="Q101" pin="6"/>
+            <node ref="P104" pin="8"/>
+        </net>
+        <net code="20" name="/analog input/BGND">
+            <node ref="U206" pin="7"/>
+            <node ref="U206" pin="6"/>
+            <node ref="P106" pin="1"/>
+            <node ref="C227" pin="1"/>
+            <node ref="C229" pin="1"/>
+        </net>
+        <net code="21" name="/LED0">
+            <node ref="P101" pin="2"/>
+            <node ref="P104" pin="5"/>
+            <node ref="Q101" pin="4"/>
+        </net>
+        <net code="22" name="GND">
+            <node ref="U203" pin="11"/>
+            <node ref="C225" pin="2"/>
+            <node ref="C228" pin="2"/>
+            <node ref="C222" pin="2"/>
+            <node ref="C223" pin="2"/>
+            <node ref="C214" pin="1"/>
+            <node ref="U206" pin="4"/>
+            <node ref="C227" pin="2"/>
+            <node ref="C224" pin="2"/>
+            <node ref="C230" pin="1"/>
+            <node ref="U204" pin="11"/>
+            <node ref="C226" pin="2"/>
+            <node ref="C213" pin="1"/>
+            <node ref="R259" pin="2"/>
+            <node ref="U205" pin="3"/>
+            <node ref="R261" pin="2"/>
+            <node ref="U201" pin="4"/>
+            <node ref="C215" pin="1"/>
+            <node ref="C216" pin="1"/>
+            <node ref="C229" pin="2"/>
+            <node ref="C221" pin="2"/>
+            <node ref="U202" pin="4"/>
+            <node ref="Q102" pin="2"/>
+            <node ref="C103" pin="2"/>
+            <node ref="C104" pin="2"/>
+            <node ref="Q102" pin="5"/>
+            <node ref="C105" pin="2"/>
+            <node ref="U103" pin="14"/>
+            <node ref="C106" pin="2"/>
+            <node ref="P102" pin="6"/>
+            <node ref="Q101" pin="5"/>
+            <node ref="Q101" pin="2"/>
+            <node ref="U102" pin="3"/>
+            <node ref="U102" pin="6"/>
+            <node ref="U102" pin="7"/>
+            <node ref="C102" pin="2"/>
+            <node ref="U101" pin="1"/>
+            <node ref="CM101" pin="4"/>
+            <node ref="C101" pin="2"/>
+        </net>
+        <net code="23" name="/analog input/OUT0">
+            <node ref="C221" pin="1"/>
+            <node ref="R253" pin="2"/>
+            <node ref="U103" pin="12"/>
+        </net>
+        <net code="24" name="/analog input/OUT1">
+            <node ref="C222" pin="1"/>
+            <node ref="R254" pin="2"/>
+            <node ref="U103" pin="11"/>
+        </net>
+        <net code="25" name="/analog input/OUT3">
+            <node ref="U103" pin="10"/>
+            <node ref="R256" pin="2"/>
+            <node ref="C224" pin="1"/>
+        </net>
+        <net code="26" name="/analog input/OUT2">
+            <node ref="C223" pin="1"/>
+            <node ref="U103" pin="2"/>
+            <node ref="R255" pin="2"/>
+        </net>
+        <net code="27" name="/analog input/IN0-">
+            <node ref="P104" pin="1"/>
+            <node ref="R201" pin="1"/>
+        </net>
+        <net code="28" name="/analog input/IN1-">
+            <node ref="P104" pin="6"/>
+            <node ref="R204" pin="1"/>
+        </net>
+        <net code="29" name="/analog input/IN1+">
+            <node ref="P104" pin="3"/>
+            <node ref="R203" pin="1"/>
+        </net>
+        <net code="30" name="/analog input/IN0+">
+            <node ref="P104" pin="2"/>
+            <node ref="R202" pin="1"/>
+        </net>
+        <net code="31" name="/VIN">
+            <node ref="P103" pin="2"/>
+            <node ref="CM101" pin="2"/>
+            <node ref="P105" pin="7"/>
+            <node ref="P105" pin="4"/>
+            <node ref="P103" pin="1"/>
+            <node ref="C106" pin="1"/>
+            <node ref="P101" pin="1"/>
+            <node ref="P104" pin="7"/>
+            <node ref="C105" pin="1"/>
+            <node ref="P104" pin="4"/>
+        </net>
+        <net code="32" name="/BUS_TX-">
+            <node ref="P103" pin="5"/>
+            <node ref="U102" pin="9"/>
+            <node ref="R101" pin="2"/>
+        </net>
+        <net code="33" name="/BUS_TX+">
+            <node ref="P103" pin="4"/>
+            <node ref="U102" pin="10"/>
+            <node ref="R101" pin="1"/>
+        </net>
+        <net code="34" name="Net-(P103-Pad9)">
+            <node ref="P103" pin="9"/>
+        </net>
+        <net code="35" name="/BUS_RX+">
+            <node ref="U102" pin="12"/>
+            <node ref="R102" pin="2"/>
+            <node ref="P103" pin="6"/>
+        </net>
+        <net code="36" name="/BUS_RX-">
+            <node ref="U102" pin="11"/>
+            <node ref="R102" pin="1"/>
+            <node ref="P103" pin="3"/>
+        </net>
+        <net code="37" name="Net-(P105-Pad9)">
+            <node ref="P105" pin="9"/>
+        </net>
+        <net code="38" name="Net-(P104-Pad9)">
+            <node ref="P104" pin="9"/>
+        </net>
+        <net code="39" name="Net-(R207-Pad2)">
+            <node ref="R215" pin="1"/>
+            <node ref="R207" pin="2"/>
+            <node ref="R223" pin="1"/>
+        </net>
+        <net code="40" name="Net-(R227-Pad2)">
+            <node ref="U202" pin="7"/>
+            <node ref="R227" pin="2"/>
+            <node ref="R231" pin="1"/>
+        </net>
+        <net code="41" name="Net-(R208-Pad2)">
+            <node ref="R224" pin="1"/>
+            <node ref="R216" pin="2"/>
+            <node ref="R208" pin="2"/>
+        </net>
+        <net code="42" name="Net-(C204-Pad2)">
+            <node ref="U202" pin="2"/>
+            <node ref="R224" pin="2"/>
+            <node ref="C204" pin="2"/>
+        </net>
+        <net code="43" name="Net-(C203-Pad2)">
+            <node ref="U202" pin="5"/>
+            <node ref="R222" pin="2"/>
+            <node ref="C203" pin="2"/>
+        </net>
+        <net code="44" name="Net-(R205-Pad2)">
+            <node ref="R213" pin="1"/>
+            <node ref="R205" pin="2"/>
+            <node ref="R221" pin="1"/>
+        </net>
+        <net code="45" name="Net-(R206-Pad2)">
+            <node ref="R222" pin="1"/>
+            <node ref="R206" pin="2"/>
+            <node ref="R214" pin="2"/>
+        </net>
+        <net code="46" name="VCOM">
+            <node ref="U206" pin="2"/>
+            <node ref="R226" pin="1"/>
+            <node ref="R215" pin="2"/>
+            <node ref="R216" pin="1"/>
+            <node ref="R227" pin="1"/>
+            <node ref="R214" pin="1"/>
+            <node ref="R213" pin="2"/>
+            <node ref="U202" pin="10"/>
+            <node ref="U203" pin="5"/>
+            <node ref="U204" pin="3"/>
+            <node ref="U203" pin="3"/>
+            <node ref="R212" pin="1"/>
+            <node ref="C226" pin="1"/>
+            <node ref="R228" pin="1"/>
+            <node ref="R210" pin="1"/>
+            <node ref="C228" pin="1"/>
+            <node ref="R211" pin="2"/>
+            <node ref="U201" pin="12"/>
+            <node ref="R225" pin="1"/>
+            <node ref="R209" pin="2"/>
+            <node ref="U201" pin="10"/>
+            <node ref="U204" pin="5"/>
+            <node ref="U202" pin="12"/>
+            <node ref="U206" pin="1"/>
+        </net>
+        <net code="47" name="Net-(C203-Pad1)">
+            <node ref="U202" pin="6"/>
+            <node ref="R221" pin="2"/>
+            <node ref="C203" pin="1"/>
+        </net>
+        <net code="48" name="Net-(R229-Pad2)">
+            <node ref="U201" pin="9"/>
+            <node ref="R229" pin="2"/>
+            <node ref="RV201" pin="1"/>
+            <node ref="RV201" pin="2"/>
+        </net>
+        <net code="49" name="Net-(R237-Pad1)">
+            <node ref="R237" pin="1"/>
+            <node ref="RV201" pin="3"/>
+        </net>
+        <net code="50" name="Net-(D209-Pad1)">
+            <node ref="U203" pin="6"/>
+            <node ref="R241" pin="1"/>
+            <node ref="D209" pin="1"/>
+            <node ref="R237" pin="2"/>
+        </net>
+        <net code="51" name="Net-(C204-Pad1)">
+            <node ref="R223" pin="2"/>
+            <node ref="C204" pin="1"/>
+            <node ref="U202" pin="3"/>
+        </net>
+        <net code="52" name="Net-(R228-Pad2)">
+            <node ref="R228" pin="2"/>
+            <node ref="R232" pin="1"/>
+            <node ref="U202" pin="1"/>
+        </net>
+        <net code="53" name="Net-(R201-Pad2)">
+            <node ref="R209" pin="1"/>
+            <node ref="R201" pin="2"/>
+            <node ref="R217" pin="1"/>
+        </net>
+        <net code="54" name="Net-(R202-Pad2)">
+            <node ref="R218" pin="1"/>
+            <node ref="R202" pin="2"/>
+            <node ref="R210" pin="2"/>
+        </net>
+        <net code="55" name="Net-(C201-Pad2)">
+            <node ref="U201" pin="5"/>
+            <node ref="R218" pin="2"/>
+            <node ref="C201" pin="2"/>
+        </net>
+        <net code="56" name="Net-(C201-Pad1)">
+            <node ref="R217" pin="2"/>
+            <node ref="C201" pin="1"/>
+            <node ref="U201" pin="6"/>
+        </net>
+        <net code="57" name="Net-(R258-Pad2)">
+            <node ref="R258" pin="2"/>
+            <node ref="U205" pin="2"/>
+            <node ref="R259" pin="1"/>
+        </net>
+        <net code="58" name="Net-(D212-Pad1)">
+            <node ref="U204" pin="6"/>
+            <node ref="R244" pin="1"/>
+            <node ref="D212" pin="1"/>
+            <node ref="R240" pin="2"/>
+        </net>
+        <net code="59" name="Net-(D212-Pad3)">
+            <node ref="D212" pin="3"/>
+            <node ref="U204" pin="7"/>
+        </net>
+        <net code="60" name="Net-(R204-Pad2)">
+            <node ref="R220" pin="1"/>
+            <node ref="R204" pin="2"/>
+            <node ref="R212" pin="2"/>
+        </net>
+        <net code="61" name="Net-(R203-Pad2)">
+            <node ref="R211" pin="1"/>
+            <node ref="R203" pin="2"/>
+            <node ref="R219" pin="1"/>
+        </net>
+        <net code="62" name="Net-(C202-Pad2)">
+            <node ref="R220" pin="2"/>
+            <node ref="C202" pin="2"/>
+            <node ref="U201" pin="2"/>
+        </net>
+        <net code="63" name="Net-(C202-Pad1)">
+            <node ref="U201" pin="3"/>
+            <node ref="R219" pin="2"/>
+            <node ref="C202" pin="1"/>
+        </net>
+        <net code="64" name="Net-(R226-Pad2)">
+            <node ref="R226" pin="2"/>
+            <node ref="R230" pin="1"/>
+            <node ref="U201" pin="1"/>
+        </net>
+        <net code="65" name="Net-(R225-Pad2)">
+            <node ref="R225" pin="2"/>
+            <node ref="U201" pin="7"/>
+            <node ref="R229" pin="1"/>
+        </net>
+        <net code="66" name="Net-(D211-Pad3)">
+            <node ref="U204" pin="1"/>
+            <node ref="D211" pin="3"/>
+        </net>
+        <net code="67" name="Net-(R260-Pad2)">
+            <node ref="U206" pin="5"/>
+            <node ref="U206" pin="3"/>
+            <node ref="R260" pin="2"/>
+            <node ref="R261" pin="1"/>
+        </net>
+        <net code="68" name="Net-(D209-Pad3)">
+            <node ref="D209" pin="3"/>
+            <node ref="U203" pin="7"/>
+        </net>
+        <net code="69" name="Net-(D209-Pad2)">
+            <node ref="D209" pin="2"/>
+            <node ref="U203" pin="10"/>
+            <node ref="R241" pin="2"/>
+        </net>
+        <net code="70" name="Net-(D210-Pad3)">
+            <node ref="U203" pin="1"/>
+            <node ref="D210" pin="3"/>
+        </net>
+        <net code="71" name="Net-(R231-Pad2)">
+            <node ref="RV203" pin="2"/>
+            <node ref="RV203" pin="1"/>
+            <node ref="R231" pin="2"/>
+            <node ref="U202" pin="9"/>
+        </net>
+        <net code="72" name="Net-(D211-Pad1)">
+            <node ref="D211" pin="1"/>
+            <node ref="R239" pin="2"/>
+            <node ref="R243" pin="1"/>
+            <node ref="U204" pin="2"/>
+        </net>
+        <net code="73" name="Net-(D211-Pad2)">
+            <node ref="D211" pin="2"/>
+            <node ref="R243" pin="2"/>
+            <node ref="U204" pin="12"/>
+        </net>
+        <net code="74" name="Net-(R239-Pad1)">
+            <node ref="RV203" pin="3"/>
+            <node ref="R239" pin="1"/>
+        </net>
+        <net code="75" name="Net-(R251-Pad2)">
+            <node ref="R255" pin="1"/>
+            <node ref="R251" pin="2"/>
+            <node ref="U204" pin="14"/>
+        </net>
+        <net code="76" name="Net-(R247-Pad2)">
+            <node ref="U204" pin="13"/>
+            <node ref="R251" pin="1"/>
+            <node ref="R247" pin="2"/>
+        </net>
+        <net code="77" name="Net-(R240-Pad1)">
+            <node ref="R240" pin="1"/>
+            <node ref="RV204" pin="3"/>
+        </net>
+        <net code="78" name="Net-(R232-Pad2)">
+            <node ref="R232" pin="2"/>
+            <node ref="U202" pin="13"/>
+            <node ref="RV204" pin="1"/>
+            <node ref="RV204" pin="2"/>
+        </net>
+        <net code="79" name="Net-(D210-Pad1)">
+            <node ref="U203" pin="2"/>
+            <node ref="R238" pin="2"/>
+            <node ref="R242" pin="1"/>
+            <node ref="D210" pin="1"/>
+        </net>
+        <net code="80" name="Net-(R245-Pad2)">
+            <node ref="R245" pin="2"/>
+            <node ref="R249" pin="1"/>
+            <node ref="U203" pin="9"/>
+        </net>
+        <net code="81" name="Net-(R238-Pad1)">
+            <node ref="R238" pin="1"/>
+            <node ref="RV202" pin="3"/>
+        </net>
+        <net code="82" name="Net-(R230-Pad2)">
+            <node ref="U201" pin="13"/>
+            <node ref="R230" pin="2"/>
+            <node ref="RV202" pin="1"/>
+            <node ref="RV202" pin="2"/>
+        </net>
+        <net code="83" name="Net-(D210-Pad2)">
+            <node ref="D210" pin="2"/>
+            <node ref="R242" pin="2"/>
+            <node ref="U203" pin="12"/>
+        </net>
+        <net code="84" name="Net-(R250-Pad2)">
+            <node ref="R254" pin="1"/>
+            <node ref="R250" pin="2"/>
+            <node ref="U203" pin="14"/>
+        </net>
+        <net code="85" name="Net-(R246-Pad2)">
+            <node ref="R246" pin="2"/>
+            <node ref="U203" pin="13"/>
+            <node ref="R250" pin="1"/>
+        </net>
+        <net code="86" name="Net-(D212-Pad2)">
+            <node ref="D212" pin="2"/>
+            <node ref="R244" pin="2"/>
+            <node ref="U204" pin="10"/>
+        </net>
+        <net code="87" name="Net-(R248-Pad2)">
+            <node ref="R248" pin="2"/>
+            <node ref="U204" pin="9"/>
+            <node ref="R252" pin="1"/>
+        </net>
+        <net code="88" name="Net-(R252-Pad2)">
+            <node ref="U204" pin="8"/>
+            <node ref="R256" pin="1"/>
+            <node ref="R252" pin="2"/>
+        </net>
+        <net code="89" name="Net-(R249-Pad2)">
+            <node ref="R249" pin="2"/>
+            <node ref="U203" pin="8"/>
+            <node ref="R253" pin="1"/>
+        </net>
+    </nets>
+</export>
