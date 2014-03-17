@@ -980,4 +980,6 @@ Connection ~ 3150 1500
 Wire Wire Line
 	3250 1700 3250 1150
 Connection ~ 3150 1700
+Text Notes 3600 3700 0    60   ~ 0
+sub SP491E OR\nsub 74*180 (bridge 13/14 on PCB)
 $EndSCHEMATC
