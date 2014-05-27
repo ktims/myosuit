@@ -2520,4 +2520,6 @@ F 3 "" H 13150 1950 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 13150 2100
+Text Notes 4500 1500 0    60   ~ 0
+sub INA2332
 $EndSCHEMATC
