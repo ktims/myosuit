@@ -1,7 +1,9 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <avr/eeprom.h>
 #include <util/delay.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #define F_CPU 8000000
 
@@ -20,11 +22,13 @@ FUSES = {
 #define LED2_REG	OCR1B
 #define LED3_REG	OCR2A
 
-volatile char rx_buf[RX_BUFSIZ];
-volatile char rx_siz = 0;
-volatile char rx_pos = 0;
+#define EEPROM_OFFSET 	0x00
 
-char myaddr, bytesleft;
+volatile char rx_buf[RX_BUFSIZ];
+volatile uint8_t rx_siz = 0;
+volatile uint8_t rx_pos = 0;
+
+uint8_t myaddr, bytesleft;
 
 enum { CMDWAIT, DATA, IGNORE } state;
 
@@ -35,6 +39,14 @@ union {
 	} s;
 	char b[5];
 } cmdbuf;
+
+uint8_t cur_adc = 0;
+const uint8_t adc_channels[] = {
+	0x01,
+	0x02,
+	0x03,
+	0x04
+};
 
 /*ISR(USART0_RX_vect) {
 	char value;
@@ -105,11 +117,12 @@ void init_usart(void) {
 }
 
 void usart_putc(char c) {
-//	PORTB |= _BV(1);
+	PORTB |= _BV(1);
 	UDR0 = c;
 	loop_until_bit_is_set(UCSR0A, TXC0);
 	UCSR0A |= _BV(TXC0);
-//	PORTB &= ~_BV(1);
+	_delay_ms(1);
+	PORTB &= ~_BV(1);
 }
 
 void usart_puts(char *s) {
@@ -117,14 +130,57 @@ void usart_puts(char *s) {
 		usart_putc(*s++);
 }
 
-void process_cmd() {
+void load_my_addr(void) {
+	uint8_t a = eeprom_read_byte((const void *)(EEPROM_OFFSET));
+	if (a == 0xff)
+		myaddr = 0;
+	else
+		myaddr = a & 0xf0;
+}
+
+void set_my_addr(uint8_t a) {
+	myaddr = a;
+	eeprom_update_byte((uint8_t *)(EEPROM_OFFSET), a);
+}
+
+void set_led(uint8_t pos, uint8_t val) {
+	switch (pos) {
+		case 0:
+			LED0_REG = val;
+			return;
+		case 1:
+			LED1_REG = val;
+			return;
+		case 2:
+			LED2_REG = val;
+			return;
+		case 3:
+			LED3_REG = val;
+			return;
+	}
+}
+
+
+/* cmds: (XX = don't care)
+ *  0x01 - set all LEDs. data 4 bytes [LED0, LED1, LED2, LED3] PWM values
+ *  0x02 - set my address. data 4 bytes [ADDR, XX, XX, XX]. top 4 bits from ADDR written to my
+ *  		  address
+ */
+void process_cmd(void) {
 	switch(cmdbuf.s.cmd) {
 		case 0x01:
+			set_led(0, cmdbuf.s.data[0]);
+			set_led(1, cmdbuf.s.data[1]);
+			set_led(2, cmdbuf.s.data[2]);
+			set_led(3, cmdbuf.s.data[3]);
+			break;
+		case 0x02:
+			set_my_addr(cmdbuf.s.data[0] & 0xf0);
 			break;
 	}
 }
 
-void process_uart() {
+void process_uart(void) {
 	while (rx_siz > rx_pos) {
 		char c = rx_buf[rx_pos++];
 		char addr;
@@ -157,29 +213,18 @@ void process_uart() {
 	}
 }
 
-void set_led(uint8_t pos, uint8_t val) {
-	switch (pos) {
-		case 0:
-			LED0_REG = val;
-			return;
-		case 1:
-			LED1_REG = val;
-			return;
-		case 2:
-			LED2_REG = val;
-			return;
-		case 3:
-			LED3_REG = val;
-			return;
-	}
-}
-
 void init_adc(void) {
-
+	cur_adc = 0;
+	ADMUXA = adc_channels[cur_adc];
+	ADMUXB = _BV(REFS1) | _BV(REFS0);
+	ADCSRA = _BV(ADEN);
+	//DIDR0 = _BV(ADC1D) | _BV(ADC2D) | _BV(ADC3D) | _BV(ADC4D);
 }
 
 int main(void) {
+	load_my_addr();
 	init_io();
+	init_adc();
 	init_usart();
 
 	uint8_t i = 0;
@@ -187,15 +232,40 @@ int main(void) {
 	// pwm runs at 31.25KHz. do a startup show.
 	for (i = 0; i < 255; i++) {
 		set_led(1, i);
-		_delay_ms(10);
+		_delay_ms(2);
 	}
 	for (i = 0; i < 255; i++) {
 		set_led(2, i);
-		_delay_ms(10);
+		_delay_ms(2);
 	}
 	for (i = 0; i < 255; i++) {
 		set_led(3, i);
-		_delay_ms(10);
+		_delay_ms(2);
+	}
+
+	char buf[16];
+	uint16_t val;
+
+	uint16_t avgbuf[16];
+
+	i = 0;
+	for (;;) {
+		//ADMUXA = adc_channels[cur_adc];
+		ADMUXA = adc_channels[0];
+		ADCSRA |= _BV(ADSC);
+		loop_until_bit_is_set(ADCSRA, ADIF);
+		avgbuf[i] = ADC;
+		if (i == 15) {
+			uint8_t j;
+			uint32_t avg = 0;
+			for (j = 0; j < 16; j++)
+				avg += avgbuf[j];
+
+			sprintf(buf, "%d:%d\r\n", cur_adc, avg/16);
+			usart_puts(buf);
+		}
+		cur_adc = (cur_adc + 1) & 0x03;
+		i = (i + 1) & 0x0f;
 	}
 
 	return 0;
