@@ -228,14 +228,26 @@ stats: $(TRG)
 	$(SIZE) $(TRG) 
 
 hex: $(HEXTRG)
+elf: $(TRG)
 
 
-writeflash: hex
+writefuses: elf
+	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
+		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
+		-V -U lfuse:w:$(TRG)
+	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
+		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
+		-V -U hfuse:w:$(TRG)
+	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
+		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
+		-V -U efuse:w:$(TRG)
+
+writeflash: elf
 	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID)   \
 	 -p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) -e        \
-	 -U flash:w:$(HEXROMTRG)
+	 -V -U flash:w:$(TRG)
 
-install: writeflash
+install: writeflash writefuses
 
 $(DUMPTRG): $(TRG) 
 	$(OBJDUMP) -S  $< > $@

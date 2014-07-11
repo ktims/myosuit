@@ -4,16 +4,17 @@
 #include <util/delay.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #define F_CPU 8000000
 
 FUSES = {
 	.low			= (FUSE_SUT_CKSEL4 & FUSE_SUT_CKSEL3 & FUSE_SUT_CKSEL2 & FUSE_SUT_CKSEL0),
-	.high			= (FUSE_SPIEN),
+	.high			= (FUSE_SPIEN & FUSE_EESAVE),
 	.extended	= 0xff,
 };
 
-#define RS485_BAUD 38400 
+#define RS485_BAUD 38400
 #define RX_BUFSIZ 8
 #define TX_BUFSIZ 8
 
@@ -23,6 +24,12 @@ FUSES = {
 #define LED3_REG	OCR2A
 
 #define EEPROM_OFFSET 	0x00
+#define EEPROM_OSCCAL   0x3f
+
+// Average N samples for each ADC reading. ADC is 10-bit, accumulator is 16-bit
+// ~ this can bet set up to 2**6 (64)
+// Should be a power of 2 for ISR efficiency
+#define ADC_AVG 	16
 
 volatile char rx_buf[RX_BUFSIZ];
 volatile uint8_t rx_siz = 0;
@@ -40,7 +47,7 @@ union {
 	char b[5];
 } cmdbuf;
 
-uint8_t cur_adc = 0;
+// ADMUX values for each ADC channel we use
 const uint8_t adc_channels[] = {
 	0x01,
 	0x02,
@@ -48,19 +55,12 @@ const uint8_t adc_channels[] = {
 	0x04
 };
 
-/*ISR(USART0_RX_vect) {
-	char value;
-
-	value = UDR0;
-
-	if (rx_siz <= rx_pos) {
-		rx_siz = 0;
-		rx_pos = 0;
-	}
-
-	if (RX_BUFSIZ -1 != rx_siz)
-		rx_buf[rx_siz++] = value;
-}*/
+// Current ADC input
+uint8_t cur_adc;
+// ISR will set this to current ADC value after averaging
+uint16_t adc_return;
+// ISR can flag main when data is available
+uint8_t adc_flag;
 
 void init_io(void) {
 	// PORTA:
@@ -102,9 +102,15 @@ void init_io(void) {
 	TOCPMCOE = _BV(TOCC3OE) | _BV(TOCC4OE) | _BV(TOCC5OE);
 }
 
+void init_osc(void) {
+	uint8_t cal = eeprom_read_byte((const void *)EEPROM_OSCCAL);
+	if (cal != 0xff)
+		OSCCAL0 = cal;
+}
+
 void init_usart(void) {
 	REMAP = _BV(0); // NB: U0MAP symbol in this version of avr-libc is incorrect defined
-	UCSR0B = _BV(RXEN0) | _BV(TXEN0); // | _BV(UCSZ02) - enable 9-bit serial
+	UCSR0B = _BV(RXEN0) | _BV(TXEN0) | _BV(RXCIE0); // | _BV(UCSZ02) - enable 9-bit serial
 	#define BAUD RS485_BAUD
 	#include <util/setbaud.h>
 	UBRR0H = UBRRH_VALUE;
@@ -160,11 +166,19 @@ void set_led(uint8_t pos, uint8_t val) {
 	}
 }
 
+void set_all_leds(uint8_t val) {
+	LED0_REG = val;
+	LED1_REG = val;
+	LED2_REG = val;
+	LED3_REG = val;
+}
 
 /* cmds: (XX = don't care)
  *  0x01 - set all LEDs. data 4 bytes [LED0, LED1, LED2, LED3] PWM values
+ *  		RETURNS: 0xff
  *  0x02 - set my address. data 4 bytes [ADDR, XX, XX, XX]. top 4 bits from ADDR written to my
  *  		  address
+ *  		RETURNS: 0xff on success
  */
 void process_cmd(void) {
 	switch(cmdbuf.s.cmd) {
@@ -173,14 +187,16 @@ void process_cmd(void) {
 			set_led(1, cmdbuf.s.data[1]);
 			set_led(2, cmdbuf.s.data[2]);
 			set_led(3, cmdbuf.s.data[3]);
+			usart_putc(0xff);
 			break;
 		case 0x02:
 			set_my_addr(cmdbuf.s.data[0] & 0xf0);
+			usart_putc(0xff);
 			break;
 	}
 }
 
-void process_uart(void) {
+void process_usart(void) {
 	while (rx_siz > rx_pos) {
 		char c = rx_buf[rx_pos++];
 		char addr;
@@ -194,15 +210,16 @@ void process_uart(void) {
 
 			case CMDWAIT:
 				addr = 0xf0 & c;
-				cmd = 0x0f & c;
-				bytesleft = 5;
-				if (addr == myaddr || addr == 0xff)
+				cmdbuf.b[0] = 0x0f & c;
+				bytesleft = 4;
+				if (addr == myaddr || addr == 0xf0)
 					state = DATA;
 				else 
 					state = IGNORE;
 				break;
+
 			case DATA:
-				cmdbuf.b[bytesleft-5] = c;
+				cmdbuf.b[5-bytesleft] = c;
 				if (--bytesleft == 0) {
 					state = CMDWAIT;
 					process_cmd();
@@ -215,21 +232,77 @@ void process_uart(void) {
 
 void init_adc(void) {
 	cur_adc = 0;
-	ADMUXA = adc_channels[cur_adc];
 	ADMUXB = _BV(REFS1) | _BV(REFS0);
-	ADCSRA = _BV(ADEN);
+	ADCSRA = _BV(ADEN) | _BV(ADIE);
 	//DIDR0 = _BV(ADC1D) | _BV(ADC2D) | _BV(ADC3D) | _BV(ADC4D);
 }
 
-int main(void) {
-	load_my_addr();
-	init_io();
-	init_adc();
-	init_usart();
+void run_adc(uint8_t channel) {
+	if (channel > 3)
+		return;
+	cur_adc = channel;
+	adc_flag = 0;
+	ADMUXA = adc_channels[cur_adc];
+	ADCSRA |= _BV(ADSC) | _BV(ADATE);
+}
 
-	uint8_t i = 0;
+ISR(ADC_vect) {
+	static uint8_t count = 0;
+	static uint16_t accum = 0;
 
+	if (count == 0)
+		accum = 0;
+
+	accum += ADC;
+
+	if (++count == ADC_AVG) {
+		adc_return = accum / ADC_AVG;
+		adc_flag = 1;
+		count = 0;
+	} 
+	// On the second-to-last sample, disable auto triggering so main can change cur_adc after the run
+	// this can be rolled into the ISR if desired...
+	else if (count == ADC_AVG-1) {
+		ADCSRA &= ~_BV(ADATE);
+	}
+}
+
+ISR(USART0_RX_vect) {
+	char value;
+
+	value = UDR0;
+
+	if (rx_siz <= rx_pos) {
+		rx_siz = 0;
+		rx_pos = 0;
+	}
+
+	if (RX_BUFSIZ-1 != rx_siz)
+		rx_buf[rx_siz++] = value;
+}
+
+
+inline void dit(void) {
+	set_all_leds(255);
+	_delay_ms(60);
+	set_all_leds(0);
+	_delay_ms(60);
+}
+
+inline void dah(void) {
+	set_all_leds(255);
+	_delay_ms(180);
+	set_all_leds(0);
+	_delay_ms(60);
+}
+
+void wank(void) {
+	uint8_t i;
 	// pwm runs at 31.25KHz. do a startup show.
+	for (i = 0; i < 255; i++) {
+		set_led(0, i);
+		_delay_ms(2);
+	}
 	for (i = 0; i < 255; i++) {
 		set_led(1, i);
 		_delay_ms(2);
@@ -243,30 +316,50 @@ int main(void) {
 		_delay_ms(2);
 	}
 
-	char buf[16];
-	uint16_t val;
+	usart_putc('Y');
+	dah(); dit(); dah(); dah();
+	_delay_ms(180);
 
-	uint16_t avgbuf[16];
+	usart_putc('M');
+	dah(); dah();
+	_delay_ms(180);
 
-	i = 0;
+	usart_putc('C');
+	dah(); dit(); dah(); dit();
+	_delay_ms(180);
+
+	usart_putc('A');
+	dit(); dah();
+	_delay_ms(180);
+
+}
+
+
+int main(void) {
+	load_my_addr();
+	init_osc();
+	init_io();
+	init_usart();
+	init_adc();
+
+	wank();
+
+	char serbuf[16];
+	uint16_t adc_vals[4];
+	
+	run_adc(0);
+
+	// GO!
+	sei();
+
 	for (;;) {
-		//ADMUXA = adc_channels[cur_adc];
-		ADMUXA = adc_channels[0];
-		ADCSRA |= _BV(ADSC);
-		loop_until_bit_is_set(ADCSRA, ADIF);
-		avgbuf[i] = ADC;
-		if (i == 15) {
-			uint8_t j;
-			uint32_t avg = 0;
-			for (j = 0; j < 16; j++)
-				avg += avgbuf[j];
-
-			sprintf(buf, "%d:%d\r\n", cur_adc, avg/16);
-			usart_puts(buf);
+		if (adc_flag) {
+			adc_vals[cur_adc] = adc_return;
+			run_adc((cur_adc+1) & 0x03);
 		}
-		cur_adc = (cur_adc + 1) & 0x03;
-		i = (i + 1) & 0x0f;
+		process_usart();
 	}
+
 
 	return 0;
 }

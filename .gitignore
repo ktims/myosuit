@@ -3,3 +3,8 @@
 *.bom.*
 *.pdf
 *.png
+*.o
+*.out
+*.hex
+*.lst
+*.map
