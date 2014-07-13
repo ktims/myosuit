@@ -145,6 +145,7 @@ CFLAGS=-I. $(INC) -g -mmcu=$(MCU) -O$(OPTLEVEL) \
 	-fpack-struct -fshort-enums             \
 	-funsigned-bitfields -funsigned-char    \
 	-Wall -Wstrict-prototypes               \
+	-std=gnu11 										 \
 	-Wa,-ahlms=$(firstword                  \
 	$(filter %.lst, $(<:.c=.lst)))
 
@@ -219,13 +220,16 @@ GENASMFILES=$(filter %.s, $(OBJDEPS:.o=.s))
 
 # Make targets:
 # all, disasm, stats, hex, writeflash/install, clean
-all: $(TRG)
+all: $(TRG) hex size
 
 disasm: $(DUMPTRG) stats
 
 stats: $(TRG)
 	$(OBJDUMP) -h $(TRG)
-	$(SIZE) $(TRG) 
+	$(SIZE) $(TRG)
+
+size: $(TRG)
+	$(SIZE) $(TRG)
 
 hex: $(HEXTRG)
 elf: $(TRG)
@@ -234,13 +238,7 @@ elf: $(TRG)
 writefuses: elf
 	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
 		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
-		-V -U lfuse:w:$(TRG)
-	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
-		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
-		-V -U hfuse:w:$(TRG)
-	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID) \
-		-p $(PROGRAMMER_MCU) -P $(AVRDUDE_PORT) \
-		-V -U efuse:w:$(TRG)
+		-V -U lfuse:w:$(TRG) -U hfuse:w:$(TRG) -U efuse:w:$(TRG)
 
 writeflash: elf
 	$(AVRDUDE) -c $(AVRDUDE_PROGRAMMERID)   \

@@ -1,0 +1,11 @@
+index 69c230d..48abb8e 100644
+--- a/src/device.c
++++ b/src/device.c
+@@ -70,6 +70,7 @@ struct device device_list[] =
+   {   "ATtiny44A",       2048,      0x60,      256,    256, DF_NO_MUL|DF_NO_JMP|DF_NO_ELPM|DF_NO_ESPM|DF_NO_EICALL|DF_NO_EIJMP},
+   {   "ATtiny45",        2048,      0x60,      256,    256, DF_NO_MUL|DF_NO_JMP|DF_NO_ELPM|DF_NO_ESPM|DF_NO_EICALL|DF_NO_EIJMP},
+   {   "ATtiny84",        4096,      0x60,      512,    512, DF_NO_MUL|DF_NO_JMP|DF_NO_ELPM|DF_NO_ESPM|DF_NO_EICALL|DF_NO_EIJMP},
++  {    "ATtiny841",       4096,      0x100,     512,    512, DF_NO_MUL|DF_NO_JMP|DF_NO_ELPM|DF_NO_ESPM|DF_NO_EICALL|DF_NO_EIJMP},
+   {   "ATtiny85",        4096,      0x60,      512,    512, DF_NO_MUL|DF_NO_JMP|DF_NO_ELPM|DF_NO_ESPM|DF_NO_EICALL|DF_NO_EIJMP},
+   // ATtiny87
+   // ATtiny167
